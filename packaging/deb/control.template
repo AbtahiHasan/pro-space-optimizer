@@ -1,0 +1,34 @@
+Package: pro-space-optimizer
+Version: @VERSION@-@REVISION@
+Architecture: @ARCH@
+Maintainer: Pro Space Optimizer contributors <noreply@example.invalid>
+Installed-Size: @INSTALLED_SIZE@
+Depends: libc6, libstdc++6, libgl1, libegl1, libglx0, libopengl0,
+ libfontconfig1, libfreetype6, @PKG_GLIB@, libdbus-1-3,
+ libx11-6, libx11-xcb1, libxcb1, libxcb-cursor0, libxcb-icccm4,
+ libxcb-image0, libxcb-keysyms1, libxcb-randr0, libxcb-render0,
+ libxcb-render-util0, libxcb-shape0, libxcb-shm0, libxcb-sync1,
+ libxcb-util1, libxcb-xfixes0, libxcb-xkb1, libxkbcommon0,
+ libxkbcommon-x11-0, libwayland-client0, libwayland-cursor0,
+ libwayland-egl1, @PKG_PNG@, libzstd1, zlib1g, libexpat1,
+ libbrotli1, libpcre2-8-0, libbz2-1.0, libffi8, @PKG_ICU@,
+ libsystemd0, @PKG_DBL@, libmd4c0, libharfbuzz0b,
+ libinput10, @PKG_MTDEV@, libdrm2, libjpeg-turbo8, libice6, libsm6
+Recommends: libglib2.0-bin, pkexec, polkitd | policykit-1
+Suggests: fonts-dejavu-core
+Section: utils
+Priority: optional
+Homepage: https://example.invalid/pro-space-optimizer
+Description: Find and remove unnecessary development folders
+ Pro Space Optimizer is a modern Liquid Glass desktop utility that
+ recursively scans parent folders you choose for disposable development
+ folders such as node_modules, vendor, .venv, __pycache__, build and
+ dist.
+ .
+ It supports project-aware ecosystem detection (160+ ecosystems), a
+ detected-ecosystem column, move-to-Trash by default, permanent deletion
+ with confirmation, optional administrator retry for permission errors,
+ and a name-only fallback mode.
+ .
+ This package is self-contained: it bundles its own Python interpreter
+ and PySide6/Qt, so no additional setup is required on the target system.

@@ -1,0 +1,38 @@
+Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Upstream-Name: pro-space-optimizer
+Source: https://example.invalid/pro-space-optimizer
+
+Files: *
+Copyright: 2024 Pro Space Optimizer contributors
+License: MIT
+ Permission is hereby granted, free of charge, to any person obtaining a copy
+ of this software and associated documentation files (the "Software"), to deal
+ in the Software without restriction, including without limitation the rights
+ to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ copies of the Software, and to permit persons to whom the Software is
+ furnished to do so, subject to the following conditions:
+ .
+ The above copyright notice and this permission notice shall be included in
+ all copies or substantial portions of the Software.
+ .
+ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+ SOFTWARE.
+
+Files: opt/pro-space-optimizer/runtime/*
+Copyright: Python Software Foundation and contributors
+License: PSF-2.0
+ This bundled copy of the Python interpreter is distributed under the Python
+ Software Foundation License Version 2.  See the full text shipped with the
+ runtime for details.
+
+Files: opt/pro-space-optimizer/runtime/lib/*/site-packages/PySide6/*
+Copyright: The Qt Company Ltd. and contributors
+License: LGPL-3+ and commercial
+ PySide6 is provided under the GNU Lesser General Public License version 3,
+ or under a commercial license.  This package redistributes the unmodified
+ upstream wheels from PyPI.

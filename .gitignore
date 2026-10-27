@@ -1,0 +1,55 @@
+# Python ---------------------------------------------------------------------
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.egg
+*.egg-info/
+.eggs/
+build/
+dist/
+sdist/
+wheels/
+*.whl
+
+# Virtual environments -------------------------------------------------------
+.venv/
+venv/
+env/
+ENV/
+.python-version
+
+# Test / lint caches ---------------------------------------------------------
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.coverage
+.coverage.*
+htmlcov/
+.tox/
+.nox/
+
+# Packaging / build artefacts ------------------------------------------------
+# Self-contained .deb produced by `make deb`.
+*.deb
+# Debian build tree staging (build/ is already ignored above).
+debian/.debhelper/
+debian/files
+debian/*.substvars
+*.buildinfo
+*.changes
+
+# Editors / IDEs -------------------------------------------------------------
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS -------------------------------------------------------------------------
+.DS_Store
+Thumbs.db
+
+# Local application runtime --------------------------------------------------
+# User-level config/cache the app may create during local runs.
+*.log

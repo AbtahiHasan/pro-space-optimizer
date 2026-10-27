@@ -1,0 +1,13 @@
+#!/bin/sh
+# prerm script for pro-space-optimizer
+set -e
+
+# On remove (not upgrade) drop the cached bytecode the bundled interpreter
+# may have written under /opt; dpkg removes the rest.
+case "$1" in
+    remove|purge)
+        rm -rf /opt/pro-space-optimizer/app/pro_space_optimizer/__pycache__ 2>/dev/null || true
+        ;;
+esac
+
+exit 0

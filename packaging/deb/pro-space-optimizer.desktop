@@ -1,0 +1,13 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Pro Space Optimizer
+GenericName=Development Folder Cleaner
+Comment=Find and remove unnecessary development folders
+Exec=/usr/bin/pro-space-optimizer
+Icon=pro-space-optimizer
+Terminal=false
+Categories=Utility;Development;FileTools;
+Keywords=clean;disk;space;node_modules;vendor;venv;cache;
+StartupNotify=true
+StartupWMClass=Pro Space Optimizer

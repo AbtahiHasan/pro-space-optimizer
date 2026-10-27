@@ -1,0 +1,27 @@
+#!/bin/sh
+# Launcher for Pro Space Optimizer.
+#
+# Runs the application with the private, bundled Python interpreter so the
+# target system needs no Python/PySide6 installed.  All paths are absolute.
+set -e
+
+BUNDLE=/opt/pro-space-optimizer
+PY="$BUNDLE/runtime/bin/python3"
+
+if [ ! -x "$PY" ]; then
+    echo "pro-space-optimizer: bundled interpreter not found at $PY" >&2
+    echo "The installation appears to be corrupt; try reinstalling the package." >&2
+    exit 1
+fi
+
+# Point the bundled interpreter at its own standard library and site-packages.
+# Using PYTHONHOME makes the runtime fully relocatable; PYTHONPATH ensures the
+# bundled PySide6 is importable regardless of how the prefix is discovered.
+PYVER="$("$PY" -c 'import sys; print("%d.%d" % sys.version_info[:2])' 2>/dev/null || echo 3.14)"
+export PYTHONHOME="$BUNDLE/runtime"
+export PYTHONPATH="$BUNDLE/runtime/lib/python${PYVER}/site-packages:$BUNDLE/app"
+
+# Keep the read-only system location clean; use the user cache for bytecode.
+export PYTHONDONTWRITEBYTECODE=1
+
+exec "$PY" -m pro_space_optimizer.app "$@"
